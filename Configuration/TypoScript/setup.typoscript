@@ -1,0 +1,29 @@
+
+plugin.tx_crudcontroller_category {
+
+}
+
+tt_content.list =< lib.contentElementWithHeader
+tt_content.list {
+    fields {
+        content {
+            fields {
+                data = CASE
+                data {
+                    key.field = list_type
+                    crudcontroller_category = USER
+                    crudcontroller_category {
+                        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                        vendorName = Petitglacon
+                        extensionName = CrudController
+                        pluginName = Category
+                        controller = Category
+                        settings {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
