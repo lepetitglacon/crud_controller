@@ -1,0 +1,17 @@
+mod.wizards.newContentElement.wizardItems {
+    plugins {
+        elements {
+            tx_crudcontroller_category {
+                iconIdentifier = blog_example_icon
+                title = Category
+                description = Display a Category
+                tt_content_defValues {
+                    CType = list
+                    list_type = = tx_crudcontroller_category
+                }
+            }
+        }
+
+        show := addToList(tx_crudcontroller_category)
+    }
+}
